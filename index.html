@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Lilita+One&family=Noto+Sans+JP:wght@100..900&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assests/fontawesome/all.css"  />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    
+
+    <title>Knottingley Judo</title>
+</head>
+<body>
+    <!-- <div class="header_wrapper"> -->
+        <div class="landing_page_header">
+            <header>
+            <h1>Judo Handbook</h1>                                                   
+            <q class="header_quote">Practice makes permament</q>
+            </header>          
+            <button tabindex="1" name="scroll_down_button" aria-label="scroll down" class="arrowDownBtn headerBtn">
+                <i class="fa-solid fa-angles-down"></i>
+            </button>
+        </div>
+        
+
+    <div class="body_wrapper">
+        <!-- <button name="menu_button" aria-label="menu" class="menuBtn headerBtn"><i class="fa-solid fa-bars"></i></button> -->
+
+        <main>
+            
+            <ul aria-label="Main menu" class="menu_list">
+                <li role="none" class="submenu" >             
+                    
+                    <input class="visually-hidden" id="mon" name="menu_option" type="radio" onchange="set_url('menu','mon')">
+                    <label for="mon">mon</label>
+                    <ul aria-label="Mon grades" class="mon submenu_content">
+                        <li role="none"><button class="close_button" aria-label="close submenu" onclick="close_submenu('#mon')"><i class="fa-solid fa-xmark"></i></button></li>    
+                    </ul>
+                </li>
+
+                <li role="none" class="submenu" >                    
+                    <input class="visually-hidden" id="kyu" name="menu_option" type="radio" onchange="set_url('menu','kyu')"/>
+                    <label for="kyu">kyu</label>
+                    <ul aria-label="Kyu grades" class="kyu submenu_content">
+                        <li role="none"><button class="close_button" aria-label="close submenu" onclick="close_submenu('#kyu')"><i class="fa-solid fa-xmark"></i></button></li>
+                    </ul>
+                </li>
+
+                <li  role="none" >
+                    <input  onchange="set_home_page()" class="visually-hidden" id="home" name="menu_option" type="radio"/>
+                    <label aria-label="home page"    for="home"><i class="gi"></i></label>
+                    
+                    <!-- <button  aria-label="home page"><i class="gi"></i></button> -->
+                </li>
+            </ul>
+            
+            <div class="main_content">
+                
+            </div>            
+        </main>
+    </div>
+
+
+
+    <template id="home_page">
+        <section class="about">
+            <h2>Knottingley Judo Club</h2>
+            <div class="polaroid">
+                <img alt="image of Knottingley Judo club 2023" src="img/judo_group.jpg" alt=" ">
+            </div>
+
+            <article class="training_info">
+               
+                <address class="location_info">
+                    Vist us on Thursday:<br/>
+                    6:30-7:45 - <span>Children (5-16 years)</span><br/>
+                    8:45-9:15 - <span>Adults (14+ years)</span><br/> 
+                    St Botolf's Parish Rooms<br />
+                    Knottingley<br/>
+                    WF11 9AN 
+                    <button class="mapBtn"><i class="fa-solid fa-diamond-turn-right"></i></button>                   
+                </address>
+                
+                <address class="contact_info">
+                    <div>
+                    Contact:<br/>
+                    Ian Sidaway<br/>
+                    email: <a href="mailto:iansid@live.co.uk">iansid@live.co.uk</a><br/>
+                    phone: <a href="00447935498518">+44 7935 498518</a><br/>
+                    </div>
+                    <div>
+                    Catriona Barber<br/>
+                    email: <a href="mailto:catriona@whimbourne.co.uk">catriona@whimbourne.co.uk</a><br/>
+                    </div>
+                </address>
+                </article>
+            </section>
+    </template>
+    
+    <script src="t_data.js"></script>
+    <script src="utils.js"></script>
+
+    <script src="js.js"></script>
+    <!-- <script type="module" src="index.js"></script> -->
+</body>
+</html>
