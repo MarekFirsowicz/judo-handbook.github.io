@@ -118,7 +118,7 @@ function addContent  (tag, header){
         
 
         const image = document.createElement('img')
-        image.setAttribute('src', `./grading_img/${item.jap}.jpg`)
+        image.setAttribute('src', `./grading_img/${item.jap.toLowerCase()}.jpg`)
         image.setAttribute('alt', `${item.jap} image`)
         const image_h = createNode('h4',item.jap)
         const h_span = createNode('span',`(${item.eng})`)
